@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B535D83-76B4-458C-9AC8-64836C1A1D3C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>servic.My.MyApplication</StartupObject>
+    <RootNamespace>servic</RootNamespace>
+    <AssemblyName>servic</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>servic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>servic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Desktop\New folder\Library\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>E:\SmartStock\SmartStock\SmartStock\SmartStock\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_date_take_out.Designer.vb">
+      <DependentUpon>edit_date_take_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="edit_date_take_out.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print.Designer.vb">
+      <DependentUpon>print.vb</DependentUpon>
+    </Compile>
+    <Compile Include="print.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="take_out.Designer.vb">
+      <DependentUpon>take_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="take_out.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import _List.Designer.vb">
+      <DependentUpon>Import _List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Import _List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert_repari.Designer.vb">
+      <DependentUpon>Insert_repari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Insert_repari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_data_repari.Designer.vb">
+      <DependentUpon>manage_data_repari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage_data_repari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_date_cus.Designer.vb">
+      <DependentUpon>show_date_cus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="show_date_cus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_equipment.Designer.vb">
+      <DependentUpon>manage_equipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage_equipment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="show_data_repari.Designer.vb">
+      <DependentUpon>show_data_repari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="show_data_repari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List_take_out.Designer.vb">
+      <DependentUpon>List_take_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="List_take_out.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="manage_customer.Designer.vb">
+      <DependentUpon>manage_customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage_customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="waitting_insert.Designer.vb">
+      <DependentUpon>waitting_insert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="waitting_insert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_date_take_out.resx">
+      <DependentUpon>edit_date_take_out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print.resx">
+      <DependentUpon>print.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="take_out.resx">
+      <DependentUpon>take_out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import _List.resx">
+      <DependentUpon>Import _List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_data_repari.resx">
+      <DependentUpon>show_data_repari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insert_repari.resx">
+      <DependentUpon>Insert_repari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_data_repari.resx">
+      <DependentUpon>manage_data_repari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="show_date_cus.resx">
+      <DependentUpon>show_date_cus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_equipment.resx">
+      <DependentUpon>manage_equipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List_take_out.resx">
+      <DependentUpon>List_take_out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_customer.resx">
+      <DependentUpon>manage_customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="waitting_insert.resx">
+      <DependentUpon>waitting_insert.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
